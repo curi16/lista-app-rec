@@ -1,0 +1,33 @@
+import './App.css'
+import React from 'react';
+
+function StatusJogo({ nivel, pontos }) {
+  const maxPontos = nivel * 1000;
+  const progresso = Math.min((pontos / maxPontos) * 100, 100);
+  const corBarra = progresso < 30 ? 'red' : progresso < 70 ? 'orange' : 'green';
+  return (
+    <div>
+      <h2>Nivel {nivel}</h2>
+      <p>Pontos: {pontos} / {maxPontos}</p>
+      <div style={{
+        width: '200px',
+        height: '20px',
+        backgroundColor: '#ddd',
+        borderRadius: '10px',
+        overflow: 'hidden'
+      }}>
+        <div style={{
+          width: `${progresso}%`,
+          height: '100%',
+          backgroundColor: corBarra,
+          transition: 'all 0.3s ease'
+        }}></div>
+      </div>
+      <p>{progresso.toFixed(1)}% completo</p>
+    </div>
+  );
+}
+
+export default function App() {
+  return <StatusJogo nivel={10} pontos={5000} />;
+}
