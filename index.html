@@ -1,31 +1,130 @@
-<section id="projetos" class="secao-projetos">
-    <h2>Meus Projetos</h2>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <div class="container-projetos">
-        <article class="card-projeto">
-            <h3>Nome do Projeto 1</h3>
-            <img src="caminho/para/imagem1.jpg" alt="Captura de tela do Projeto 1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Portfólio Profissional</title>
 
-            <p class="descricao">
-                Breve descrição sobre o projeto. Explique o problema que ele resolve, qual era o seu papel (se for em
-                equipe) e o que você aprendeu.
-            </p>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
 
-            <p class="tecnologias">
-                **Tecnologias Utilizadas:** HTML, CSS (Sass), JavaScript (React).
-            </p>
+        .secao-projetos {
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-            <div class="links-projeto">
-                <a href="https://github.com/curi16/lista-app-rec/tree/main/1" target="_blank" class="link-demo">Ver Demo
-                    (Live)</a>
-                <a href="https://github.com/curi16/lista-app-rec" target="_blank" class="link-codigo">Código Fonte
-                    (GitHub)</a>
-            </div>
-        </article>
+        h2 {
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #2c3e50;
+        }
 
-        <article class="card-projeto">
-            <h3>Nome do Projeto 2</h3>
-        </article>
+        .container-projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    </div>
-</section>
+        .card-projeto {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .card-projeto:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-projeto img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .links-projeto a {
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 10px;
+            padding: 10px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .link-demo {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .link-codigo {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="projetos" class="secao-projetos">
+        <h2>🚀 Meus Projetos em Destaque</h2>
+
+        <div class="container-projetos">
+
+            <article class="card-projeto">
+                <h3>Nome do Projeto 1 (Ex: E-commerce Mockup)</h3>
+                <img src="assets/projeto1-thumb.jpg" alt="Imagem do Projeto 1">
+
+                <p class="descricao">
+                    Aplicação full-stack desenvolvida para simular uma loja virtual. Fui responsável pela interface
+                    responsiva e a integração com a API de produtos.
+                </p>
+
+                <p class="tecnologias">
+                    **Tecnologias:** React, Node.js (Express), MongoDB.
+                </p>
+
+                <div class="links-projeto">
+                    <a href="URL_DEMO_PROJETO_1" target="_blank" class="link-demo">Ver Demo</a>
+                    <a href="URL_GITHUB_PROJETO_1" target="_blank" class="link-codigo">Código Fonte</a>
+                </div>
+            </article>
+
+            <article class="card-projeto">
+                <h3>Nome do Projeto 2 (Ex: Dashboard de Finanças)</h3>
+                <img src="assets/projeto2-thumb.jpg" alt="Imagem do Projeto 2">
+
+                <p class="descricao">
+                    Dashboard analítico para visualização de dados financeiros em tempo real. Utilização intensa de
+                    gráficos e otimização de performance.
+                </p>
+
+                <p class="tecnologias">
+                    **Tecnologias:** Vue.js, D3.js, API REST.
+                </p>
+
+                <div class="links-projeto">
+                    <a href="URL_DEMO_PROJETO_2" target="_blank" class="link-demo">Ver Demo</a>
+                    <a href="URL_GITHUB_PROJETO_2" target="_blank" class="link-codigo">Código Fonte</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
